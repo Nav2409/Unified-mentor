@@ -40,7 +40,7 @@ top_sectors_by_year <- data1 %>%
   gather(key = "Year", value = "fdi", -Sector) %>%
   group_by(Year) %>%
   slice(which.max(fdi)) %>%
-  arrange(desc(fdi))
+  arrange(desc(Year))
 print(top_sectors_by_year)
 
 
